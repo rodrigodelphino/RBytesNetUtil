@@ -1,3 +1,5 @@
+using System;
+
 namespace RBytesNetUtil;
 
 /// <summary>

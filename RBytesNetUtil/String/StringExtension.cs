@@ -1,3 +1,5 @@
+using System;
+
 public static class StringExtensions
 {
     public static string SubstituirTudo(this string originalString, string oldValue, string newValue, StringComparison comparisonType = StringComparison.Ordinal)
