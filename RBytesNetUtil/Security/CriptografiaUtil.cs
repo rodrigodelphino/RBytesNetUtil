@@ -39,6 +39,7 @@ namespace RBytesNetUtil
                 }
             }
         }
+        
         public static string Decrypt(string cipherText, string key)
         {
             if (long.TryParse(cipherText, out long retornoParse))
@@ -71,7 +72,7 @@ namespace RBytesNetUtil
             
             byte[] data = md5Hash.ComputeHash(Encoding.UTF8.GetBytes(input));
 
-            StringBuilder sBuilder = new StringBuilder();
+            StringBuilder sBuilder = new();
 
             for (int i = 0; i < data.Length; i++)
             {
@@ -104,7 +105,7 @@ namespace RBytesNetUtil
 
             byte[] data = md5Hash.ComputeHash(Encoding.UTF8.GetBytes(input));
 
-            StringBuilder sBuilder = new StringBuilder();
+            StringBuilder sBuilder = new();
 
             for (int i = 0; i < data.Length; i++)
             {
@@ -114,7 +115,7 @@ namespace RBytesNetUtil
             return sBuilder.ToString();
         }
 
-        public static string GerarSenha(int tamanho)
+        public static string GerarSenhaSimples(int tamanho)
         {
             var chars = "abcdfghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
             var random = new Random();
