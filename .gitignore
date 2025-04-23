@@ -52,3 +52,8 @@ CodeCoverage/
 *.VisualState.xml
 TestResult.xml
 nunit-*.xml
+/.vs/RBytesNetUtil/CopilotIndices/17.14.536.4876
+/.vs/ProjectEvaluation
+/.vs/RBytesNetUtil/DesignTimeBuild
+/.vs/RBytesNetUtil/FileContentIndex
+/.vs/RBytesNetUtil/v17
