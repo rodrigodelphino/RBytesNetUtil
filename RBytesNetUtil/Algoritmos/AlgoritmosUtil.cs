@@ -3,7 +3,7 @@ namespace RBytesNetUtil;
 /// <summary>
 /// Algoritmos clássicos e úteis.
 /// </summary>
-public static class RBytesAlgoritmosUtil
+public static class RBytesAlgoritmoUtil
 {
     /// <summary>
     /// Algoritmo de Kadane: encontra a soma máxima de subarray contíguo.
