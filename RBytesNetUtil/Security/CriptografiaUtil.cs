@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace RBytesNetUtil
 {
-    public static class CriptografiaUtil
+    public static class RBytesCriptografiaUtil
     {
         private static readonly byte[] initVectorBytes = Encoding.ASCII.GetBytes("tu89geji340t89u2");
 
