@@ -20,7 +20,7 @@ Console.WriteLine(RBytesMathUtil.MMC(10, 15));         // 30
 Console.WriteLine(RBytesMathUtil.MDC(36, 60));         // 12
 
 //EXEMPLO DATETIME
-Console.WriteLine(RBytesDateTimeUtil.ConverterMesExtensoParaNumerico("01"));          // janeiro
+Console.WriteLine(RBytesDateTimeUtil.ConverterMesExtensoParaNumerico("01"));  // janeiro
 Console.WriteLine(RBytesDateTimeUtil.AppendTimeStamp("arquivo.xls"));     
 
 //EXEMPLO SORT

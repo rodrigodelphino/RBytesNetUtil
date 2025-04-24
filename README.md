@@ -102,4 +102,107 @@ Ou copie o código do repositório [RBytesNetUtil](https://github.com/rodrigodel
 
 ---
 
-Contribuições são bem-vindas! 🚀
+# RBytesNetUtil
+
+Biblioteca utilitária em .NET focada em produtividade, reutilização de código e simplicidade.
+
+Contém funções comuns para manipulação de arquivos, datas, textos, formatações (CPF, CNPJ, CEP, etc), operações matemáticas e muito mais.
+
+---
+
+## 📁 Estrutura do projeto
+
+- `RBytesNetUtil/` — Código-fonte da biblioteca.
+- `RBytesNetUtil.Tests/` — Projeto de testes unitários com xUnit.
+- `Samples/` — Exemplos práticos de uso.
+- `RBytesNetUtil.sln` — Solução do Visual Studio / .NET CLI.
+
+---
+
+## 🚀 Comandos úteis para desenvolvimento (.NET)
+
+### ▶️ Executar exemplo (via CLI)
+```bash
+dotnet run --project Samples
+```
+
+### 🧪 Executar todos os testes
+```bash
+dotnet test
+```
+
+### 🔧 Compilar a solução
+```bash
+dotnet build MinhaBiblioteca.sln
+```
+
+### 🧹 Restaurar pacotes e limpar build
+```bash
+dotnet restore
+
+dotnet clean
+```
+
+### 📦 Adicionar novo pacote NuGet
+```bash
+dotnet add package NomeDoPacote
+```
+
+### 📄 Atualizar todos os pacotes NuGet (via PowerShell)
+```powershell
+Get-Project | ForEach-Object { dotnet list $_.Name package --outdated }
+```
+
+Ou use a interface do Visual Studio para gerenciar pacotes NuGet graficamente.
+
+---
+
+## 🆕 Como criar novos projetos no .NET
+
+Esses comandos ajudam a criar novos tipos de projetos e adicioná-los à solução (`.sln`) existente:
+
+### 📚 Biblioteca de Classes (Class Library)
+Cria um novo projeto de biblioteca com código reutilizável:
+```bash
+dotnet new classlib -n MinhaBiblioteca.Utils
+# Adiciona o projeto à solução
+dotnet sln MinhaBiblioteca.sln add MinhaBiblioteca.Utils/MinhaBiblioteca.Utils.csproj
+```
+
+### 🧪 Projeto de Testes com xUnit
+Ideal para testar funcionalidades da biblioteca:
+```bash
+dotnet new xunit -n MinhaBiblioteca.Utils.Tests
+# Adiciona à solução e cria referência à biblioteca
+dotnet sln MinhaBiblioteca.sln add MinhaBiblioteca.Utils.Tests/MinhaBiblioteca.Utils.Tests.csproj
+dotnet add MinhaBiblioteca.Utils.Tests reference MinhaBiblioteca.Utils
+```
+
+### 🌐 API Web (Web API)
+Cria um backend simples via HTTP:
+```bash
+dotnet new webapi -n MinhaBiblioteca.Api
+# Adiciona à solução
+dotnet sln MinhaBiblioteca.sln add MinhaBiblioteca.Api/MinhaBiblioteca.Api.csproj
+```
+
+### 🖥 Aplicativo de Console (Exemplo)
+Útil para demonstrar uso da biblioteca:
+```bash
+dotnet new console -n Samples.ExemploNovo
+# Adiciona à solução
+dotnet sln MinhaBiblioteca.sln add Samples.ExemploNovo/Samples.ExemploNovo.csproj
+```
+
+> 💡 *Dica:* a extensão `.sln` (solution) organiza vários projetos em um mesmo repositório, facilitando o desenvolvimento e testes conjuntos.
+
+---
+
+## 🤝 Contribuição
+
+Pull requests são bem-vindos! Sinta-se à vontade para abrir issues, reportar bugs ou sugerir melhorias. Este projeto visa ser simples e acessível para toda a comunidade .NET.
+
+---
+
+Por Rodrigo Delphino - [github.com/rodrigodelphino](https://github.com/rodrigodelphino)
+
