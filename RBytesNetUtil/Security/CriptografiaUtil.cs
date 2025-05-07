@@ -21,7 +21,7 @@ namespace RBytesNetUtil
             using (PasswordDeriveBytes password = new PasswordDeriveBytes(key, null))
             {
                 byte[] keyBytes = password.GetBytes(keysize / 8);
-                using (RijndaelManaged symmetricKey = new RijndaelManaged())
+                using (var symmetricKey = new RijndaelManaged())
                 {
                     symmetricKey.Mode = CipherMode.CBC;
                     using (ICryptoTransform encryptor = symmetricKey.CreateEncryptor(keyBytes, initVectorBytes))
@@ -49,14 +49,14 @@ namespace RBytesNetUtil
             using (PasswordDeriveBytes password = new PasswordDeriveBytes(key, null))
             {
                 byte[] keyBytes = password.GetBytes(keysize / 8);
-                using (RijndaelManaged symmetricKey = new RijndaelManaged())
+                using (var symmetricKey = new RijndaelManaged())
                 {
                     symmetricKey.Mode = CipherMode.CBC;
                     using (ICryptoTransform decryptor = symmetricKey.CreateDecryptor(keyBytes, initVectorBytes))
                     {
-                        MemoryStream memoryStream = new MemoryStream(cipherTextBytes);
+                        MemoryStream memoryStream = new(cipherTextBytes);
 
-                        using (CryptoStream cryptoStream = new CryptoStream(memoryStream, decryptor, CryptoStreamMode.Read))
+                        using (CryptoStream cryptoStream = new(memoryStream, decryptor, CryptoStreamMode.Read))
                         {
                             byte[] plainTextBytes = new byte[cipherTextBytes.Length];
                             int decryptedByteCount = cryptoStream.Read(plainTextBytes, 0, plainTextBytes.Length);
