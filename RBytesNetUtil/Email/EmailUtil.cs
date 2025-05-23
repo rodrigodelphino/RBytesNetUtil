@@ -99,7 +99,7 @@ namespace RBytesNetUtil
                     client.Host = HOST;
                     client.Port = PORTA;
                     client.EnableSsl = true;
-                    client.Timeout = (2 * TIMEOUT);
+                    client.Timeout = TIMEOUT;
                     client.UseDefaultCredentials = false;
                     client.Credentials = new System.Net.NetworkCredential(usuario, senha);
                     client.Send(emailMessage);
