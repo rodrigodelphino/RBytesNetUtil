@@ -90,7 +90,9 @@ namespace RBytesNetUtil
         public static string EnviarEmailCompleto(System.Net.Mail.MailMessage emailMessage,
                                             string usuario, string senha,
                                             string HOST,
-                                            int PORTA, int TIMEOUT = 120)
+                                            int PORTA, 
+                                            int TIMEOUT = 120, 
+                                            bool SSL = true)
         {
             string retorno = "";
             try
@@ -98,7 +100,7 @@ namespace RBytesNetUtil
                     SmtpClient client = new();
                     client.Host = HOST;
                     client.Port = PORTA;
-                    client.EnableSsl = true;
+                    client.EnableSsl = SSL;
                     client.Timeout = TIMEOUT;
                     client.UseDefaultCredentials = false;
                     client.Credentials = new System.Net.NetworkCredential(usuario, senha);
