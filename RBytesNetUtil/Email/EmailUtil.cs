@@ -100,7 +100,7 @@ namespace RBytesNetUtil
                     SmtpClient client = new();
                     client.Host = HOST;
                     client.Port = PORTA;
-                    client.EnableSsl = (PORTA == 25) ? false : SSL;
+                    client.EnableSsl = SSL;
                     client.Timeout = TIMEOUT;
                     client.UseDefaultCredentials = false;
                     client.Credentials = new System.Net.NetworkCredential(usuario, senha);
